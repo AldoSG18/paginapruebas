@@ -157,11 +157,6 @@
     const info = document.getElementById('info');
     const arContainer = document.getElementById('ar-container');
 
-    //crear marker 3 para animación
-    const marker3 = document.createElement('a-marker');
-    marker3.setAttribute('type', 'pattern');
-    marker3.setAttribute('url', 'markers/pattern-marcaCreeper.patt');
-
     startBtn.addEventListener('click', () => {
       info.style.display = 'none';
       startBtn.style.display = 'none';
@@ -193,6 +188,10 @@
       scene.appendChild(marker2);
 
       //marcador 3 - animación
+      //crear marker 3 para animación
+      const marker3 = document.createElement('a-marker');
+      marker3.setAttribute('type', 'pattern');
+      marker3.setAttribute('url', 'markers/pattern-marcaCreeper.patt');
       const model3 = document.createElement('a-entity');
       model3.setAttribute('gltf-model', 'embriologia/Pruebas.glb');
       model3.setAttribute('position', '0 0 0');
